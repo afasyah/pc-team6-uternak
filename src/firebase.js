@@ -12,8 +12,8 @@ const firebaseConfig = {
   projectId: "uternak-9a8b2",
   storageBucket: "uternak-9a8b2.appspot.com",
   messagingSenderId: "913373662943",
-  appId: "1:913373662943:web:f6efbc7d66f40315ec636a",
-  measurementId: "G-E4X7K3HPQV",
+  appId: "1:913373662943:web:b4d9ad4635f95b92ec636a",
+  measurementId: "G-WHZZ9K7CHP",
 };
 
 // Initialize Firebase
