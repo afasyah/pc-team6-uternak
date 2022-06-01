@@ -1,0 +1,63 @@
+.btn:focus,
+.btn:active {
+   outline: none !important;
+   box-shadow: none !important;
+}
+
+.btn-primary {
+   color: $white !important;
+}
+
+.btn-primary-light {
+   color: $primary !important;
+}
+
+.btn-text-primary {
+   &:hover {
+      background-color: $primary-light !important;
+      color: $primary !important;
+      
+      svg > * {
+         fill: $primary !important;
+      }
+   }
+
+   svg > * {
+      fill: $gray-500 !important;
+      stroke: none !important;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+   }
+}
+
+.btn-reversed-primary {
+   background-color: $primary-light !important;
+   color: $primary !important;
+
+   &:hover {
+      background-color: $primary !important;
+      color: $white !important;
+      
+      svg > * {
+         fill: $white !important;
+      }
+   }
+
+   svg > * {
+      fill: $primary !important;
+      stroke: none !important;
+   }
+}
+
+.btn-text-primary {
+   background-color: transparent !important;
+   color: $primary !important;
+
+   &:hover {
+      background-color: $primary-light !important;
+   }
+
+   svg > * {
+      fill: $primary !important;
+      stroke: none !important;
+   }
+}

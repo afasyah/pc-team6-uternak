@@ -1,30 +1,28 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <router-view></router-view>
   </div>
-  <router-view />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import { defineComponent, getCurrentInstance, provide } from "vue";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { createToaster } from "@meforma/vue-toaster";
+import "./assets/scss/index.scss";
 
-#nav {
-  padding: 30px;
-}
+export default defineComponent({
+  name: "app",
+  setup() {
+    const app: any = getCurrentInstance()?.appContext.app;
+    const toaster = createToaster({
+      position: "top-right",
+      duration: 3000,
+    });
+    provide("$toast", toaster);
+    provide("app", app);
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+    return {};
+  },
+});
+</script>

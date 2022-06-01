@@ -1,20 +1,47 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
+import Login from "../views/Login.vue";
+import Register from "../views/Register.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "Home",
+    name: "home",
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/login",
+    name: "login",
+    component: Login,
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: Register,
+  },
+  {
+    path: "/marketplace",
+    name: "marketplace",
+    redirect: {
+      name: "marketplace-index",
+    },
+    meta: {
+      group: "marketplace",
+    },
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+      import(
+        /* webpackChunkName: "marketplace" */ "@/layouts/MarketplaceLayout.vue"
+      ),
+    children: [
+      {
+        path: "index",
+        name: "marketplace-index",
+        component: () =>
+          import(
+            /* webpackChunkName: "marketplace-index" */ "@/views/marketplace/Marketplace.vue"
+          ),
+      },
+    ],
   },
 ];
 

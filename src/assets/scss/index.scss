@@ -1,0 +1,116 @@
+@import "./custom";
+@import "./buttons";
+@import "~bootstrap/scss/bootstrap";
+
+html,
+body {
+   font-size: 15px !important;
+}
+
+.offcanvas {
+   width: 300px;
+ }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray-300;
+}
+
+.scroll-on-hover {
+  visibility: hidden;
+
+  & > div,
+  &:hover,
+  &:focus {
+    visibility: visible;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.router-link-active,
+.router-link-exact-active {
+  background-color: transparent !important;
+  color: $primary !important;
+  
+  svg > * {
+    fill: $primary !important;
+  }
+}
+
+.sidebar-content .router-link-active,
+.sidebar-content .router-link-exact-active {
+  background-color: $primary-light !important;
+  color: $primary !important;
+  border-left: 4px solid $primary !important;
+  
+  svg > * {
+    fill: $primary !important;
+  }
+
+  &:hover {
+    background-color: $primary-light !important;
+    color: $primary !important;
+    
+    svg > * {
+       fill: $primary !important;
+    }
+ }
+}
+
+.device-card {
+  border-left: 5px solid $primary !important;
+}
+
+.table-link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.swiper-button-prev, .swiper-button-next {
+  --swiper-theme-color: #ffffff;
+}
+
+.swiper-pagination-bullet {
+  --swiper-theme-color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+  --swiper-theme-color: #ffffff;
+}
+
+.review-star {
+  color: $yellow;
+}
+ 
+ @media screen and (min-width: 768px) {
+   .offcanvas {
+     width: 400px;
+   }
+
+   .side-content {
+    width: 35%;
+  }
+
+  .display-content {
+    width: 75%;
+  }
+ }
