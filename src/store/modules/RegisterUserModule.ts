@@ -40,8 +40,8 @@ interface RegisterUser {
 
 @Module
 export default class LayoutModule extends VuexModule implements RegisterUser {
-  register = window.localStorage.getItem("ct_user-register")
-    ? JSON.parse(window.localStorage.getItem("ct_user-register") as string)
+  register = window.localStorage.getItem("ut_user-register")
+    ? JSON.parse(window.localStorage.getItem("ut_user-register") as string)
     : {
         step1: {
           name: "",

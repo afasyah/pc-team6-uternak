@@ -43,11 +43,9 @@ export default defineComponent({
     const route = useRoute();
     const layout = computed(() => store.getters["getLayout"]);
 
-    let group = "Dashboard";
-    if (route.meta.group === "dashboard") {
-      group = "Dashboard";
-    } else if (route.meta.group === "my-things") {
-      group = "Dashboard";
+    let group = "Marketplace";
+    if (route.meta.group === "marketplace") {
+      group = "Marketplace";
     }
 
     const sidebar = computed(() =>
