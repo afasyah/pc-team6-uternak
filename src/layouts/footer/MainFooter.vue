@@ -1,7 +1,7 @@
 <template>
   <footer
     ref="mainFooter"
-    class="footer border border-top-3 border-gray-light py-5 px-6 mt-4"
+    class="footer border-top border-gray-light py-5 px-6 mt-4"
   >
     <div class="row">
       <div class="col d-flex align-items-center">

@@ -41,6 +41,14 @@ const routes: Array<RouteRecordRaw> = [
             /* webpackChunkName: "marketplace-index" */ "@/views/marketplace/Marketplace.vue"
           ),
       },
+      {
+        path: "product/:id",
+        name: "marketplace-product-showcase",
+        component: () =>
+          import(
+            /* webpackChunkName: "marketplace-product-showcase" */ "@/views/marketplace/Product.vue"
+          ),
+      },
     ],
   },
 ];
